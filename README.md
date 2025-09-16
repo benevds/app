@@ -25,7 +25,7 @@ bet_app/
 │   ├── footer.php      # Rodapé comum das páginas
 │   └── header.php      # Cabeçalho comum das páginas
 └── js/
-    └── script.js       # Scripts JavaScript
+└── script.js       # Scripts JavaScript
 
 
 ## 🚀 Como Executar o Projeto
