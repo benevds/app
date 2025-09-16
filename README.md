@@ -1,67 +1,77 @@
-# Projeto Bet App
+# Bet App - Aplicação de Apostas
 
-Este é um simples aplicativo web de apostas desenvolvido em PHP.
+Bem-vindo ao Bet App, uma aplicação web para gerenciamento de apostas desenvolvida em PHP puro, seguindo as melhores práticas de segurança e estruturação de projetos.
 
-## Estrutura do Projeto
+## ✨ Funcionalidades
 
-```
+* **Autenticação Segura:** Sistema completo de Registro, Login e Logout de usuários com senhas criptografadas.
+* **Gestão de Perfil:** Permite que usuários alterem seus dados cadastrais e senha de forma segura.
+* **Estrutura Escalável:** Código organizado em pastas e arquivos reutilizáveis (`includes`) para fácil manutenção.
+* **Setup Automatizado:** O sistema cria a tabela de usuários automaticamente no banco de dados no primeiro acesso.
+
+## ⚙️ Estrutura do Projeto
+
 bet_app/
-├── config.php            # Configurações do banco de dados
-├── index.php             # Página principal (após login)
-├── login.php             # Página de login
-├── logout.php            # Script de logout
-├── profile.php           # Página de perfil do usuário
-├── register.php          # Página de registro
+├── config.php          # Credenciais do banco de dados
+├── index.php           # Página principal (após login)
+├── login.php           # Página de login
+├── logout.php          # Script de logout
+├── profile.php         # Página de perfil do usuário
+├── register.php        # Página de registro
 ├── css/
-│   └── style.css         # Folha de estilos
+│   └── style.css       # Folha de estilos
 ├── includes/
-│   ├── db.php            # Conexão com o banco de dados
-│   ├── footer.php        # Rodapé comum das páginas
-│   └── header.php        # Cabeçalho comum das páginas
+│   ├── db.php          # Conexão com o banco e criação automática da tabela
+│   ├── footer.php      # Rodapé comum das páginas
+│   └── header.php      # Cabeçalho comum das páginas
 └── js/
-    └── script.js         # Scripts JavaScript
-```
+    └── script.js       # Scripts JavaScript
 
-## Funcionalidades
 
-*   Registro de usuário
-*   Login e Logout de usuário
-*   Página de perfil do usuário
+## 🚀 Como Executar o Projeto
 
-## Como Configurar e Executar
+A maneira recomendada para desenvolvimento rápido é usar o servidor embutido do PHP.
 
 ### Pré-requisitos
 
-*   Um servidor web com suporte a PHP (como Apache ou Nginx).
-*   Um servidor de banco de dados MySQL.
-*   (Opcional) Ferramentas como XAMPP, WAMP ou MAMP que já incluem o Apache, PHP e MySQL.
+* PHP (versão 7.4 ou superior)
+* MySQL ou MariaDB
+* Git (para clonar o repositório)
 
-### Passos
+### Passos para Instalação
 
-1.  **Banco de Dados:**
-    *   Crie um novo banco de dados no seu MySQL com o nome `bet_app`.
-    *   Importe a estrutura das tabelas necessárias para o funcionamento do sistema (o arquivo SQL não está incluído neste repositório).
-
-2.  **Configuração:**
-    *   Abra o arquivo `config.php`.
-    *   Altere as constantes `DB_SERVER`, `DB_USERNAME`, `DB_PASSWORD` e `DB_NAME` com as credenciais do seu banco de dados.
-
-    ```php
-    <?php
-    define('DB_SERVER', 'localhost');
-    define('DB_USERNAME', 'seu_usuario');
-    define('DB_PASSWORD', 'sua_senha');
-    define('DB_NAME', 'bet_app');
-    ?>
+1.  **Clone o Repositório:**
+    Abra seu terminal e execute o comando abaixo para clonar o projeto.
+    ```bash
+    git clone https://github.com/benevds/bet_app.git
     ```
 
-3.  **Execução:**
-    *   **Usando um servidor local (XAMPP, etc.):**
-        *   Copie a pasta `bet_app` para o diretório raiz do seu servidor web (geralmente `htdocs` no XAMPP).
-        *   Abra seu navegador e acesse `http://localhost/bet_app/register.php` para começar.
-    *   **Usando o servidor embutido do PHP:**
-        *   Navegue até a pasta do projeto pelo terminal.
-        *   Execute o comando: `php -S localhost:8000`
-        *   Abra seu navegador e acesse `http://localhost:8000/register.php`.
+2.  **Acesse a Pasta do Projeto:**
+    ```bash
+    cd bet_app
+    ```
 
+3.  **Configure o Banco de Dados:**
+    * Crie um banco de dados vazio no seu MySQL com o nome `bet_app`.
+    * Abra o arquivo `config.php` e altere as constantes `DB_USERNAME` e `DB_PASSWORD` com as suas credenciais do MySQL.
+        ```php
+        define('DB_SERVER', 'localhost');
+        define('DB_USERNAME', 'seu_usuario_mysql'); // ex: 'root'
+        define('DB_PASSWORD', 'sua_senha_mysql'); // ex: '' ou 'senha'
+        define('DB_NAME', 'bet_app');
+        ```
+    * **A tabela `users` será criada automaticamente** na primeira execução.
 
+### Executando o Projeto
+
+1.  **Inicie o Servidor:**
+    Com o terminal aberto na pasta do projeto, execute o comando:
+    ```bash
+    php -S localhost:8000
+    ```
+
+2.  **Acesse a Aplicação:**
+    Abra seu navegador e acesse a URL:
+    [http://localhost:8000/register.php](http://localhost:8000/register.php)
+
+Para desligar o servidor, pressione `Ctrl + C` no terminal.
