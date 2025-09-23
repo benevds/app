@@ -21,6 +21,7 @@
             </div>
             <button type="submit">Entrar</button>
         </form>
+        <p class="link-footer">Não tem uma conta? <a href="registro.php">Crie uma aqui</a></p>
     </div>
 </body>
 </html>

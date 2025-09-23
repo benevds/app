@@ -58,8 +58,8 @@ $transacoes = $stmt_extrato->fetchAll(PDO::FETCH_ASSOC);
                 <li><a href="apartamentos.php"><i class="fas fa-building"></i><span>Apartamentos</span></a></li>
                 <li><a href="moradores.php"><i class="fas fa-users"></i><span>Moradores</span></a></li>
                 <li class="active"><a href="financas.php"><i class="fas fa-hand-holding-usd"></i><span>Financeiro</span></a></li>
-                <li><a href="#"><i class="fas fa-tools"></i><span>Manutenção</span></a></li>
-                <li><a href="#"><i class="fas fa-bullhorn"></i><span>Avisos</span></a></li>
+                <li><a href="manutencao.php"><i class="fas fa-tools"></i><span>Manutenção</span></a></li>
+                <li><a href="avisos.php"><i class="fas fa-bullhorn"></i><span>Avisos</span></a></li>
             </ul>
             <div class="sidebar-footer"><a href="php/auth/logout.php"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a></div>
         </aside>

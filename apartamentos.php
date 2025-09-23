@@ -28,10 +28,10 @@ try {
             <ul class="menu">
                 <li><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                 <li class="active"><a href="apartamentos.php"><i class="fas fa-building"></i><span>Apartamentos</span></a></li>
-                <li><a href="financas.php"><i class="fas fa-hand-holding-usd"></i><span>Financeiro</span></a></li>
-                <li><a href="#"><i class="fas fa-tools"></i><span>Manutenção</span></a></li>
-                <li><a href="#"><i class="fas fa-bullhorn"></i><span>Avisos</span></a></li>
                 <li class=""><a href="moradores.php"><i class="fas fa-users"></i><span>Moradores</span></a></li>
+                <li><a href="financas.php"><i class="fas fa-hand-holding-usd"></i><span>Financeiro</span></a></li>
+                <li><a href="manutencao.php"><i class="fas fa-tools"></i><span>Manutenção</span></a></li>
+                <li><a href="avisos.php"><i class="fas fa-bullhorn"></i><span>Avisos</span></a></li>
             </ul>
             <div class="sidebar-footer">
                 <a href="php/auth/logout.php"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
@@ -101,8 +101,8 @@ try {
                             <td>R$ <?php echo number_format($ap['valor_aluguel'], 2, ',', '.'); ?></td>
                             <td><?php echo htmlspecialchars($ap['morador_nome'] ?? 'Vago'); ?></td>
                             <td class="actions">
-                                <a href="#" title="Editar"><i class="fas fa-edit"></i></a>
-                                <a href="#" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+                                <a href="editar_apartamento.php?id=<?php echo $ap['id']; ?>" title="Editar"><i class="fas fa-edit"></i></a>
+                                <a href="php/actions/excluir_apartamento.php?id=<?php echo $ap['id']; ?>" title="Excluir" onclick="return confirm('Tem certeza que deseja excluir este apartamento?');"><i class="fas fa-trash-alt"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
